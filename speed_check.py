@@ -6,7 +6,13 @@ import math
 
 carCascade = cv2.CascadeClassifier('myhaar.xml')
 video = cv2.VideoCapture('cars.mp4')
-
+# (major_ver, minor_ver, subminor_ver) = (cv2._version_).split('.')
+# if int(major_ver)  < 3 :
+# 	fps = video.get(cv2.cv.CV_CAP_PROP_FPS)
+# 	print("Frames per second using video.get(cv2.cv.CV_CAP_PROP_FPS):"+str(fps))
+# else :
+fps = video.get(cv2.CAP_PROP_FPS)
+print("Frames per second using video.get(cv2.CAP_PROP_FPS) :"+str(fps))
 WIDTH = 1280
 HEIGHT = 720
 
